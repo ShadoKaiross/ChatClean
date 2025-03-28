@@ -1,22 +1,6 @@
 import discord
 from discord.ext import commands
 import os
-from flask import Flask
-import threading
-
-app = Flask(__name__)
-
-# Web sayfası: Bu, sunucunun çalışıp çalıştığını test edebilmek için basit bir sayfa.
-@app.route('/')
-def home():
-    return "Bot Çalışıyor!"
-
-# Flask'ı çalıştıran fonksiyon
-def run():
-    app.run(host="0.0.0.0", port=5000)
-
-# Flask sunucusunu ayrı bir thread'de çalıştır
-threading.Thread(target=run).start()
 
 # Bot kodunu buraya ekle, yani botunun geri kalan kısmı buradan devam eder.
 import discord
