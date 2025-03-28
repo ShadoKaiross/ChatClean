@@ -29,6 +29,7 @@ def run_bot():
     
     # !temizle komutu
     @bot.command()
+    @commands.has_role(1354170988870369342)  # Rol ismini buraya yazın
     async def temizle(ctx, channel_name: str):
         # Kanal adı ile kanalı bulma
         channel = discord.utils.get(ctx.guild.text_channels, name=channel_name)
