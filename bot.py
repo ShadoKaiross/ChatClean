@@ -3,7 +3,7 @@ from discord.ext import commands
 import os
 
 
-TOKEN = os.getenv("TOKEN")  # Bot token'ını Replit'ten alıyoruz
+TOKEN = 'MTM1NDk3NTA2MjMzOTM1NDY0NA.G6yZh0.58FKCQf-GrdAQJkthSSPnh_9bwJNbpqJ1obeeo'  # Bot tokenını buraya ekle
 intents = discord.Intents.default()
 intents.messages = True
 intents.guilds = True
