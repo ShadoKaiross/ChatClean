@@ -36,7 +36,15 @@ def run_bot():
 
         await ctx.send(f"{channel_name} adlı kanal temizleniyor...")
         
-        await channel.purge()
+        # 300 mesajı silmek için döngü ile purge işlemi
+    limit = 300  # Her seferinde silmek istediğiniz mesaj sayısı
+    while True:
+        deleted = await channel.purge(limit=100)  # Bir seferde maksimum 100 siler
+        if len(deleted) < 100:  # Eğer 100'den az mesaj silindiyse, işlem tamamlanır
+            break
+        limit -= 100  # Silinen mesajları düşür
+        if limit <= 0:  # Hedeflenen mesaj sayısına ulaşıldıysa dur
+            break
 
         await ctx.send(f"{channel_name} adlı kanal başarıyla temizlendi!")
 
