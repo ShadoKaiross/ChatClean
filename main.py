@@ -4,7 +4,7 @@ import os
 
 
 # GitHub secrets'tan bot token'ını al
-TOKEN = os.getenv('TOKEN')  # GitHub secrets kısmına eklediğin TOKEN ismiyle
+TOKEN = os.getenv('DISCORD_TOKEN')  # GitHub secrets kısmına eklediğin TOKEN ismiyle
 intents = discord.Intents.default()
 intents.messages = True
 intents.guilds = True
