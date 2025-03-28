@@ -3,7 +3,8 @@ from discord.ext import commands
 import os
 
 
-TOKEN = 'MTM1NDk3NTA2MjMzOTM1NDY0NA.G6yZh0.58FKCQf-GrdAQJkthSSPnh_9bwJNbpqJ1obeeo'  # Bot tokenını buraya ekle
+# GitHub secrets'tan bot token'ını al
+TOKEN = os.getenv('TOKEN')  # GitHub secrets kısmına eklediğin TOKEN ismiyle
 intents = discord.Intents.default()
 intents.messages = True
 intents.guilds = True
